@@ -1,0 +1,931 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --amarelo: #ebae3e;
+  --azul: #2c4675;
+  --laranja: #d45c45;
+  --laranja-claro: #ff7900;
+}
+
+body {
+  background-color: var(--azul);
+}
+
+@keyframes scroll {
+  from {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*======================================== Cabeçalho =========================================  */
+header {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.cabecalho-foto-livro {
+  height: 40rem;
+  animation: scroll 1s ease-out forwards; /* Animação ao carregar */
+}
+
+.cabecalho-texto {
+  width: 51%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+  animation: scroll 1s ease-out forwards; /* Animação ao carregar */
+}
+.cabecalho-titulo1 {
+  color: var(--laranja);
+  font-weight: bold;
+  font-size: 7.2rem;
+}
+
+.cabecalho-titulo2 {
+  color: white;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+.cabecalho-descricao {
+  font-size: 2rem;
+  color: darkgray;
+  text-align: right;
+  line-height: 3rem;
+  width: 87%;
+}
+
+.cabecalho-descricao span {
+  font-weight: bold;
+}
+
+.cabecalho-butao {
+  width: 45%;
+  color: white;
+  background-color: var(--amarelo);
+  height: 5rem;
+  border: solid 1px var(--amarelo);
+  font-size: 2rem;
+  font-style: italic;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cabecalho-butao:hover {
+  background-color: var(--laranja-claro);
+  border-color: var(--laranja-claro);
+}
+
+/* ======================================= Assunto do Livro =================================== */
+
+.section-assunto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: var(--amarelo);
+}
+
+.box-titulo {
+  width: 50%;
+  text-align: justify;
+}
+
+.box-titulo h2 {
+  color: white;
+  font-size: 8rem;
+  font-weight: bold;
+  width: 84%;
+  margin-bottom: 2rem;
+}
+
+.box-titulo p {
+  color: white;
+  font-size: 2rem;
+}
+
+.box-fases-butao {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.box-fases {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 1rem;
+  height: 3.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3:hover {
+  border-color: var(--laranja-claro);
+  cursor: pointer;
+}
+
+.fases-azuis {
+  background-color: var(--azul);
+  border: solid 3px var(--azul);
+  font-size: 2rem;
+  color: white;
+}
+
+.fases-brancas {
+  background-color: white;
+  font-size: 2rem;
+  border: solid 3px white;
+  color: black;
+}
+
+.fases-azuis-texto {
+  font-size: 1.8rem;
+  color: black;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid 3px var(--azul);
+  padding: 1rem;
+  display: none;
+}
+
+.fases-brancas-texto {
+  font-size: 1.9rem;
+  color: white;
+  background-color: var(--azul);
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border: solid 3px white;
+  padding: 1rem;
+  display: none;
+}
+
+.butao-comprar {
+  background-color: var(--laranja-claro);
+  color: white;
+  font-style: italic;
+  padding: 1rem;
+  width: 60%;
+  border: solid 2px var(--laranja-claro);
+  border-radius: 25px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.butao-comprar:hover {
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--laranja);
+  border-color: var(--laranja);
+}
+
+/* ======================================== Conquista ================================*/
+.section-conquista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  gap: 10rem;
+}
+
+#div-beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.conquista-titulo1 {
+  font-size: 4.2rem;
+  color: var(--laranja);
+  font-weight: bold;
+}
+
+.conquista-titulo2 {
+  font-size: 3.3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.caixa-beneficios {
+  display: flex;
+  justify-content: space-around;
+}
+
+.beneficios {
+  background-color: var(--amarelo);
+  font-size: 2rem;
+  width: 20%;
+  border: solid 3px var(--amarelo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.caixa-icones {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.beneficios p {
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+
+/* =============================== Para quem é esse livro? ================== */
+.section-publico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  gap: 5rem;
+  background-color: var(--amarelo);
+}
+
+.section-publico h2 {
+  font-size: 4.2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.caixa-publico {
+  display: flex;
+  justify-content: space-around;
+}
+
+.caixa-publico li {
+  font-size: 2rem;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  font-weight: bold;
+  line-height: 2.5rem;
+  border: solid 3px var(--azul);
+  background-color: var(--azul);
+  border-radius: 25px;
+}
+
+/* ===================================== Sobre o Autor ============================= */
+.section-autor {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.autor-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.section-autor img {
+  height: 40rem;
+  width: 20%;
+  border-radius: 25px;
+}
+
+.autor-texto h2 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.autor-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+  width: 50%;
+  height: 40rem;
+}
+
+.autor-texto p {
+  font-size: 2rem;
+}
+
+.autor-paragrafos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 2.5rem;
+}
+
+/*================================== Responsividade ============================  */
+@media screen and (max-width: 1462px) {
+  .box-titulo h2 {
+    width: 94%;
+  }
+}
+@media screen and (max-width: 1311px) {
+  .box-titulo h2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .cabecalho-texto {
+    width: 59%;
+  }
+}
+
+@media screen and (max-width: 1234px) {
+  .box-titulo {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1126px) {
+  .box-titulo {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .cabecalho-texto {
+    width: 69%;
+  }
+}
+
+@media screen and (max-width: 1185px) {
+  .section-autor img {
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 1036px) {
+  .box-titulo {
+    width: 66%;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .section-autor img {
+    width: 33%;
+  }
+  .autor-conteudo {
+    flex-direction: column;
+  }
+  .autor-texto {
+    height: auto;
+  }
+  .autor-texto h2 {
+    text-align: center;
+  }
+  .autor-texto p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 958px) {
+  header {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    justify-content: start;
+  }
+
+  .cabecalho-texto {
+    align-items: center;
+    justify-content: end;
+    width: 81%;
+    height: 51%;
+  }
+
+  .cabecalho-descricao {
+    text-align: center;
+    width: 80%;
+  }
+
+  .cabecalho-foto-livro {
+    height: 41%;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .section-assunto {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .box-titulo {
+    width: 75%;
+  }
+
+  .box-fases-butao {
+    width: 44%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .caixa-publico {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .caixa-publico li {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 837px) {
+  .box-titulo {
+    width: 86%;
+  }
+}
+
+@media screen and (max-width: 821px) {
+  .cabecalho-texto {
+    align-items: center;
+    width: 98%;
+  }
+
+  .cabecalho-descricao {
+    text-align: center;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  #div-beneficios {
+    flex-direction: row;
+  }
+  .caixa-beneficios {
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .beneficios {
+    width: 65%;
+    height: 22.8rem;
+  }
+}
+
+@media screen and (max-width: 734px) {
+  .box-titulo h2 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 726px) {
+  .conquista-titulo1 {
+    font-size: 3.5rem;
+  }
+
+  .conquista-titulo2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .cabecalho-texto {
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .cabecalho-titulo1 {
+    font-size: 6.2rem;
+  }
+  .cabecalho-titulo2 {
+    font-size: 4.2rem;
+  }
+}
+
+@media screen and (max-width: 657px) {
+  .section-publico h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .box-titulo h2 {
+    font-size: 6rem;
+  }
+
+  .box-fases-butao {
+    width: 54%;
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .box-titulo h2 {
+    font-size: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .cabecalho-butao {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .autor-texto {
+    height: auto;
+    width: 78%;
+  }
+
+  .section-autor img {
+    width: 57%;
+  }
+}
+
+@media screen and (max-width: 592px) {
+  .conquista-titulo1 {
+    font-size: 3rem;
+  }
+  .conquista-titulo2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  .cabecalho-titulo1 {
+    font-size: 5rem;
+  }
+  .cabecalho-titulo2 {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 554px) {
+  .cabecalho-butao {
+    width: 57%;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .section-publico h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .conquista-titulo1 {
+    font-size: 2.5rem;
+  }
+  .conquista-titulo2 {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 517px) {
+  .box-titulo {
+    width: 100%;
+  }
+
+  .box-fases-butao {
+    width: 74%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cabecalho-texto {
+    height: 54%;
+  }
+  .cabecalho-foto-livro {
+    height: 31%;
+  }
+}
+
+@media screen and (max-width: 488px) {
+  .cabecalho-butao {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .cabecalho-titulo1 {
+    font-size: 4rem;
+  }
+  .cabecalho-titulo2 {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 451px) {
+  .box-titulo {
+    width: 100%;
+  }
+
+  .box-titulo h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  .section-publico h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .caixa-publico li {
+    font-size: 1.6rem;
+    width: 51%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .cabecalho-butao {
+    width: 65%;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .beneficios {
+    height: 21.8rem;
+  }
+  .beneficios p {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .conquista-titulo1 {
+    font-size: 2rem;
+  }
+  .conquista-titulo2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .box-fases-butao {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .autor-texto {
+    height: auto;
+    width: 86%;
+  }
+
+  .section-autor img {
+    width: 76%;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .cabecalho-butao {
+    width: 71%;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  .cabecalho-titulo1 {
+    font-size: 3.5rem;
+  }
+  .cabecalho-titulo2 {
+    font-size: 2.4rem;
+  }
+
+  .cabecalho-descricao {
+    width: 84%;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  #div-beneficios {
+    flex-direction: column;
+  }
+
+  .beneficios {
+    height: 16.8rem;
+    width: 56%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section-publico h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .cabecalho-butao {
+    width: 73%;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 346px) {
+  .conquista-titulo1 {
+    font-size: 1.9rem;
+  }
+
+  .conquista-titulo2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .cabecalho-titulo1 {
+    font-size: 3rem;
+  }
+
+  .cabecalho-titulo2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 341px) {
+  .cabecalho-texto {
+    height: 57%;
+  }
+
+  /* .cabecalho-foto-livro {
+    height: 33%;
+  } */
+}
+
+@media screen and (max-width: 339px) {
+  .box-titulo h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .box-fases-butao {
+    width: 83%;
+  }
+}
